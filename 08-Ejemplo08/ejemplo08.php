@@ -44,6 +44,14 @@
         $i--;
     }
     
+    echo "<br>";
+
+    $j = 1;
+    while ($j <= 10) {
+        echo $j."<br>";
+        $j++;
+    }   
+    
     */
 
     //Ejemplo: Listar los N primeros pares
@@ -59,14 +67,29 @@
         }
         $i++;
     }
-    
     */
+    
+    /*
+    echo "Ingrese el número máximo de pares a listar: ";
+    $n = readline();
+
+    $i = 1;
+    while ($i <= $n) {
+        if ($i % 2 == 0) {
+            echo $i . "<br>";
+        }
+        $i++;
+    }
+*/
+
+
+
 
     //Ejemplo: Listar los N primeros elementos de la 
     //siguiente serie: 1/2, 3/4, 5/6,..N
     //----------------------------------------------
     
-    /* 
+    /*
     
     $n = 20;
     $i = 1;
@@ -79,6 +102,20 @@
         $i++;
     }
     
+    */
+
+    /*
+    
+    $n = 10; // Número de elementos a listar
+    $numerador = 1;
+    $denominador = 2;
+
+    for ($i = 1; $i <= $n; $i++) {
+        echo $numerador . '/' . $denominador . "<br>";
+        $numerador += 2;
+        $denominador += 2;
+    }
+
     */
 
 
@@ -104,6 +141,22 @@
     }
     
     */
+
+    /*
+    $n = 10; // Número de elementos a listar
+    $numerador = 1;
+    $denominador = 5;
+
+    for ($i = 1; $i <= $n; $i++) {
+        echo $numerador . '/' . $denominador . "<br>";
+        $numerador = -$i * 2;
+        $denominador += 5;
+    }
+    */
+
+
+
+
 
 
     /*****************************
@@ -155,5 +208,5 @@
 
 
 
-      
+
 ?>
