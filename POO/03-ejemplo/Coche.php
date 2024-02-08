@@ -38,10 +38,10 @@
       
       $miCoche = new Coche('Gasoil');
       
-      echo "Velocidad después de acelerar con el depósito vacío: " . $miCoche->acelerar(10) . "\n";
-      echo "Combustible después de repostar con el combustible equivocado:  " . $miCoche->repostar("Gasolina", 40). "\n"; 
-      echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche->repostar("Gasoil", 40) . "\n";
-      echo "Velocidad después de acelerar con combustible en el depósito: ". $miCoche->acelerar(10) . "\n";
+      echo "Velocidad después de acelerar con el depósito vacío: " . $miCoche->acelerar(10) . "<br>";
+      echo "Combustible después de repostar con el combustible equivocado:  " . $miCoche->repostar("Gasolina", 40). "<br>"; 
+      echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche->repostar("Gasoil", 40) . "<br>";
+      echo "Velocidad después de acelerar con combustible en el depósito: ". $miCoche->acelerar(10) . "<br>";
       echo "Estado del coche: ". $miCoche->estado();
 
 ?>
