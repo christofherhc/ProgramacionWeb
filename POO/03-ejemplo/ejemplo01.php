@@ -6,29 +6,51 @@
      //Clase Coche
     class Coche
     {
-        //Propiedades
+        /**
+         * Propiedades
+         */
         public $color;
         public $potencia;
         public $velocidad = 0;
         
-        //Metodos
-        public function acelerar() {
-            echo "Acelerando";
-        }
-        // public function acelerar($velocidad) {
-        //     $velocidad = $velocidad + 1;
+        /** 
+         * Metodos
+         */
+        // public function acelerar() {
+        //     echo "Acelerando"."<br>";
         // }
 
+        //Cambiar las propiedades desde dentro
+        // public function acelerar() {
+        //     $this->velocidad = $this->velocidad + 1;
+        // }
+        /*
+            "$this" es una variable que nos permite acceder a los 
+            métodos y propiedades desde dentro del código de la clase. 
+        */
+        //Pasar parámetros a un método
+        public function acelerar( $incremento ) {
+            $this->velocidad += $incremento;
+        }
+
+        public function repostar( $tipoCombustible, $litros ) {
+            echo "Glu, glu";
+        }
 
     }
 
+    class Gasolina
+    {
+        public $octanaje = "";
+    }
+    /*
     //Instanciando / Creando Objeto
     $miCoche = new Coche;
     //Accediendo a la propiedad color
     $miCoche->color;
     //Accediendo al metodo acelerar()
     $miCoche->acelerar();
-
+    */
     /**
      * El símbolo → (un guión seguido de >) es el que nos permite
      * acceder a las propiedades y métodos del objeto.
@@ -43,7 +65,7 @@
      ***************************************************/
 
     /*Imprime todo lo que hay en el objeto*/        
-    print_r($miCoche);  
+    // print_r($miCoche);  
     /*
     Coche Object
     (
@@ -62,7 +84,7 @@
 
 <?php
     
-    var_dump($miCoche);
+    // var_dump($miCoche);
 
     /*
     
@@ -91,11 +113,11 @@
     /**
      * Si hubiésemos dado un valor al color del coche:
      */
-
+    /*
     $miCoche = new Coche;
     $miCoche->color = 'Azul';
-
-    var_dump($miCoche);
+    */
+    // var_dump($miCoche);
     /*
         el resultado hubiese sido:
         object(Coche)#1 (2) {
@@ -123,11 +145,11 @@
     /*************************************
      * Cambiar el valor de una propiedad *
      *************************************/
-
+/*
      $miCoche->color = 'Rojo';
 
      print_r($miCoche);
-
+*/
 ?>
 
 <br><br> <!-- Salto de linea doble -->
@@ -137,12 +159,13 @@
     /*************************************
      * Acceder al valor de una propiedad *
      *************************************/
-
+/*
      echo $miCoche->color;
 
      // Y, claro está, podemos usarla como una variable normal:
      $color = $miCoche->color;
      echo '<br>'.$color;
+*/
 ?>
 
 <br><br> <!-- Salto de linea doble -->
@@ -151,7 +174,7 @@
     /*************************************
      * Cada objeto tiene sus propiedades *
      *************************************/
-
+/*
      $miCoche = new Coche;
      $tuCoche = new Coche;
 
@@ -161,7 +184,7 @@
      print_r($miCoche);
      echo "<br>"; //Salto de linea en PHP
      print_r($tuCoche);
-
+*/
     /*
         Coche Object
         (
@@ -205,6 +228,48 @@
      * Cambiar las propiedades desde dentro *
      ****************************************/
 
+    // $miCoche = new Coche;
+    // $miCoche->acelerar();
+    // print_r($miCoche);
+
+/*
+    Recordemos que en PHP ésto:
+        $this->velocidad = $this->velocidad + 1;
+    es equivalente a ésto:
+        $this->velocidad += 1;
+*/
+    ?>
+    
+<br><br> <!-- Salto de linea doble -->
+
+<?php
+    /********************************
+     * Pasar parámetros a un método *
+     ********************************/
+    $miCoche = new Coche;
+    $miCoche->acelerar(10);
+    print_r($miCoche); 
+
+    /** Más de un parámetro
+     * --------------------
+    * public function metodo( $parametro1, $parametro2, $parametro3 ) {}
+    */
+
+
+    /** Variables como parámetros
+     * --------------------------
+     * Podemos usar una variable que contenga el valor que queremos pasar:
+     *      $miCoche->acelerar( $cantidad );
+     * También podemos pasar el valor de la propiedad de otro objeto:
+     *      $miCoche->acelerar( $otroObjeto->cantidad );
+     * O un elemento de un array:
+     *      $miCoche->acelerar( $miArray[10] );
+     */
+
+
+    /** Pasar un objeto como parámetro
+     * -------------------------------
+     */
 ?>
 
 <br><br> <!-- Salto de linea doble -->
@@ -212,6 +277,9 @@
 <?php
     
 ?>
+ 
+ <br><br> <!-- Salto de linea doble -->
 
-
-
+ <?php
+    
+ ?>
